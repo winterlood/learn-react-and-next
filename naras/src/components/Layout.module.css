@@ -15,8 +15,8 @@
 }
 
 .container > main {
-  padding-top: calc(var(--header-height) + 10px);
+  padding-top: calc(var(--header-height) + 20px);
   width: var(--main-width);
-  min-height: calc(100vh - (var(--header-height) + 10px));
+  min-height: calc(100vh - (var(--header-height) + 20px));
   margin: 0 auto;
 }
