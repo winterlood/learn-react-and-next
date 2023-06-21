@@ -1,0 +1,35 @@
+import axios from "axios";
+
+const BASE_URL = "https://restcountries.com/v3.1";
+
+const FIELDS = [
+  "cca3",
+  "name",
+  "capital",
+  "region",
+  "flag",
+  "flags",
+  "population",
+];
+
+export const fetchAllCountries = async () => {
+  try {
+    const response = await axios.get(
+      `${BASE_URL}/independent?status=true&fields=${FIELDS.join(",")}`
+    );
+
+    const countries = response.data;
+
+    return countries.map((country) => ({
+      code: country.cca3,
+      flagImg: country.flags.png,
+      flagEmoji: country.flag,
+      commonName: country.name.common,
+      region: country.region,
+      capital: country.capital.join(", "),
+      population: country.population,
+    }));
+  } catch (e) {
+    throw new Error(e);
+  }
+};

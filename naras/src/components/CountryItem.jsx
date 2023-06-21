@@ -2,28 +2,30 @@ import { useNavigate } from "react-router-dom";
 import style from "./CountryItem.module.css";
 
 const mock = {
+  code: "KOR",
   flagImg: "https://flagcdn.com/w320/kr.png",
   flagEmoji: "🇰🇷",
   commonName: "South Korea",
   region: "Asia",
-  languages: "Korean",
+  capital: "Seoul",
   population: 2000,
 };
 
 export default function CountryItem(props) {
   const {
+    code,
     flagImg,
     flagEmoji,
     commonName,
     region,
-    languages,
+    capital,
     population,
   } = props;
 
   const nav = useNavigate();
 
   const onClickItem = () => {
-    nav(`/country/${commonName}`);
+    nav(`/country/${code}`);
   };
 
   return (
@@ -35,14 +37,14 @@ export default function CountryItem(props) {
         </div>
         <div className={style.info_wrapper}>
           <div className={style.region}>지역 : {region}</div>
-          <div className={style.languages}>언어 : {languages}</div>
           <div className={style.population}>평판 : {population}</div>
+          <div className={style.capital}>수도 : {capital}</div>
         </div>
       </div>
     </div>
   );
 }
 
-CountryItem.defaultProps = {
-  ...mock,
-};
+// CountryItem.defaultProps = {
+//   ...mock,
+// };
