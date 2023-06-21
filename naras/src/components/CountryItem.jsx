@@ -1,16 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import style from "./CountryItem.module.css";
 
-const mock = {
-  code: "KOR",
-  flagImg: "https://flagcdn.com/w320/kr.png",
-  flagEmoji: "🇰🇷",
-  commonName: "South Korea",
-  region: "Asia",
-  capital: "Seoul",
-  population: 2000,
-};
-
 export default function CountryItem(props) {
   const {
     code,
@@ -44,7 +34,3 @@ export default function CountryItem(props) {
     </div>
   );
 }
-
-// CountryItem.defaultProps = {
-//   ...mock,
-// };
