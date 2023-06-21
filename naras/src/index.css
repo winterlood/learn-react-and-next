@@ -1,10 +1,15 @@
 html,
 body {
   margin: 0px;
+  background-color: var(--color-neutral-4);
 }
 
 :root {
   --main-width: 600px;
   --header-height: 50px;
-  --border-color: rgb(240, 240, 240);
+
+  --color-neutral-1: rgb(50, 50, 50);
+  --color-neutral-2: rgb(150, 150, 150);
+  --color-neutral-3: rgb(220, 220, 220);
+  --color-neutral-4: rgb(245, 245, 245);
 }
