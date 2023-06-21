@@ -1,0 +1,28 @@
+.container {
+  width: 260px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.container .flag_img {
+  width: 100%;
+}
+
+.container .inner {
+  padding: 10px;
+}
+
+.container .inner .name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.container .inner .info_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
