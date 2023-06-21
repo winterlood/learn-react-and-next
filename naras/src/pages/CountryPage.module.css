@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.container > section > label {
+  font-weight: bold;
+}
+
+.container .header {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--color-neutral-3);
+}
+
+.container .header .commonName {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.container .body {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}

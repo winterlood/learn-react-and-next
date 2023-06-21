@@ -44,5 +44,20 @@ export const fetchSearchResult = async (q) => {
 
     const countries = response.data;
     return countries.map((country) => simplifyCountry(country));
+  } catch (e) {
+    throw new Error(e);
+  }
+};
+
+export const fetchCountry = async (code) => {
+  try {
+    const response = await axios.get(`${BASE_URL}/alpha/${code}`);
+    const country = response.data[0];
+
+    return {
+      ...simplifyCountry(country),
+      officialName: country.name.official,
+      googleMapURL: country.maps.googleMaps,
+    };
   } catch (e) {}
 };
