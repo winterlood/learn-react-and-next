@@ -5,6 +5,9 @@ export default function CountryList() {
   return (
     <div className={style.container}>
       <CountryItem />
+      <CountryItem />
+      <CountryItem />
+      <CountryItem />
     </div>
   );
 }
