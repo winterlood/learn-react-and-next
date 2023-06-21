@@ -11,6 +11,7 @@ export default function HomePage() {
 
   const setInitData = async () => {
     const data = await fetchAllCountries();
+    data.sort((a, b) => b.population - a.population);
     setCountries(data);
   };
 

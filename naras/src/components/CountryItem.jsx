@@ -27,8 +27,8 @@ export default function CountryItem(props) {
         </div>
         <div className={style.info_wrapper}>
           <div className={style.region}>지역 : {region}</div>
-          <div className={style.population}>평판 : {population}</div>
           <div className={style.capital}>수도 : {capital}</div>
+          <div className={style.population}>인구 : {population}</div>
         </div>
       </div>
     </div>
