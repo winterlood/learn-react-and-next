@@ -21,7 +21,9 @@ export default function Searchbar({ q }) {
   };
 
   const onClickSearch = () => {
-    nav(`/search?q=${search}`);
+    if (search.length > 0) {
+      nav(`/search?q=${search}`);
+    }
   };
 
   return (
