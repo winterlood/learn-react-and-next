@@ -19,7 +19,7 @@ const simplifyCountry = (country) => {
     flagEmoji: country.flag,
     commonName: country.name.common,
     region: country.region,
-    capital: country.capital.join(", "),
+    capital: country.capital?.join(", "),
     population: country.population,
   };
 };
